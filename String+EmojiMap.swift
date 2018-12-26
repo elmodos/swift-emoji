@@ -29,7 +29,7 @@ extension String {
 
     public func byReplacingEmojiNamesWithGlyphs() -> String {
         struct Static {
-            static var regex = try? NSRegularExpression(pattern: ":([a-z0-9_-]+):", options: [])
+            static var regex = try? NSRegularExpression(pattern: ":([a-z0-9+_-]+):", options: [])
         }
         guard let regex = Static.regex else {
             return self
